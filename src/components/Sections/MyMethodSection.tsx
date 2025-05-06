@@ -15,7 +15,7 @@ export default function MyMethodSection() {
 
           <Grid.Col span={{ base: 12, md: 8 }} mx="auto">
             <Text c="#283618" size="md" mb="sm">
-              Mon approche est fondée sur le respect, l'écoute et la
+              Mon approche est fondée sur le respect, l&rsquo;écoute et la
               compréhension du chien <strong>et</strong> de sa famille.
               J’utilise des méthodes{" "}
               <strong>positives et personnalisées</strong>, adaptées au
