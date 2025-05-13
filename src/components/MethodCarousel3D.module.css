@@ -1,0 +1,62 @@
+.section {
+  padding: 80px 0;
+  background-color: #fff;
+  text-align: center;
+}
+
+.title {
+  margin-bottom: 40px;
+  font-size: 2rem;
+  color: #283618;
+}
+
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 20px;
+  padding: 60px 20px; /* ↑ Ajout de padding vertical */
+  perspective: 1000px;
+  flex-wrap: nowrap;
+  overflow-x: auto; /* conserve le scroll horizontal */
+  overflow-y: visible; /* 👈 permet aux cartes de dépasser en hauteur */
+  scroll-snap-type: x mandatory;
+  position: relative; /* 👈 utile si besoin d’ajuster z-index */
+}
+
+.card {
+  background-color: #fefae0;
+  border: 1px solid #dda15e;
+  min-width: 220px;
+  height: 280px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  transform: translateY(0px) scale(1) rotateX(0deg);
+  scroll-snap-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.05);
+}
+
+.card.active {
+  transform: translateY(-20px) scale(1.1);
+  z-index: 10;
+}
+
+.card.shrink {
+  transform: scale(0.9);
+  filter: brightness(0.85);
+  z-index: 0;
+}
+
+.icon {
+  font-size: 2rem;
+  color: #606c38;
+  margin-bottom: 12px;
+}
